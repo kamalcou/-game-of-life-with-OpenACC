@@ -1,0 +1,16 @@
+
+The following have been reloaded with a version change:
+  1) intel/19.1.2.275 => intel/19.0.4.243
+
+
+The following have been reloaded with a version change:
+  1) gcc/11.3.0-r23ins7 => gcc/9.3.0     2) intel/19.0.4.243 => intel/19.1.2.275
+
+NOTE: Circular reference shows PGI 18.5 when PGI 20.1 is in path 
+
+The following have been reloaded with a version change:
+  1) cuda/11.7.0 => cuda/10.1.168     2) intel/19.1.2.275 => intel/19.0.4.243
+
+Problem Size N=10000 in number of Iterations=5000
+Time taken 2069.648022 seconds for 5000 iterations
+Writing output to file: /scratch/ualclsb0056/gol_project_output.10000.5000.txt

@@ -1,0 +1,882 @@
+
+The following have been reloaded with a version change:
+  1) intel/19.1.2.275 => intel/19.0.4.243
+
+
+The following have been reloaded with a version change:
+  1) gcc/11.3.0-r23ins7 => gcc/9.3.0     2) intel/19.0.4.243 => intel/19.1.2.275
+
+NOTE: Circular reference shows PGI 18.5 when PGI 20.1 is in path 
+
+The following have been reloaded with a version change:
+  1) cuda/11.7.0 => cuda/10.1.168     2) intel/19.1.2.275 => intel/19.0.4.243
+
+compute_acc:
+    106, Generating copy(life[:M+2][:N+2]) [if not already present]
+         Generating create(temp[:M+2][:N+2]) [if not already present]
+    111, Complex loop carried dependence of life->->,temp->-> prevents parallelization
+         Generating Tesla code
+        111, #pragma acc loop seq
+        113, #pragma acc loop gang, vector(128) /* blockIdx.x threadIdx.x */
+    143, Complex loop carried dependence of life->->,temp->-> prevents parallelization
+         Generating Tesla code
+        143, #pragma acc loop seq
+        145, #pragma acc loop gang, vector(128) /* blockIdx.x threadIdx.x */
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=4016016
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=4016016
+Problem Size N=1000 in number of Iterations=1000
+Acc Time taken 1.226401 seconds for 1000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.1000.1000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 846,246
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [8]  block: [128]
+             device time(us): total=7 max=4 min=3 avg=3
+            elapsed time(us): total=667 max=614 min=53 avg=333
+        106: data copyin transfers: 1
+             device time(us): total=364 max=364 min=364 avg=364
+        148: data copyout transfers: 1
+             device time(us): total=349 max=349 min=349 avg=349
+    111: compute region reached 1000 times
+        111: kernel launched 1000 times
+            grid: [8]  block: [128]
+             device time(us): total=525,812 max=603 min=510 avg=525
+            elapsed time(us): total=541,891 max=618 min=525 avg=541
+    143: compute region reached 1000 times
+        143: kernel launched 1000 times
+            grid: [8]  block: [128]
+             device time(us): total=319,714 max=341 min=311 avg=319
+            elapsed time(us): total=336,243 max=727 min=326 avg=336
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=4016016
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=4016016
+Problem Size N=1000 in number of Iterations=1000
+Acc Time taken 1.193851 seconds for 1000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.1000.1000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 832,319
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [8]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=642 max=601 min=41 avg=321
+        106: data copyin transfers: 1
+             device time(us): total=361 max=361 min=361 avg=361
+        148: data copyout transfers: 1
+             device time(us): total=349 max=349 min=349 avg=349
+    111: compute region reached 1000 times
+        111: kernel launched 1000 times
+            grid: [8]  block: [128]
+             device time(us): total=516,389 max=549 min=487 avg=516
+            elapsed time(us): total=531,916 max=910 min=508 avg=531
+    143: compute region reached 1000 times
+        143: kernel launched 1000 times
+            grid: [8]  block: [128]
+             device time(us): total=315,214 max=323 min=296 avg=315
+            elapsed time(us): total=330,377 max=368 min=309 avg=330
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=4016016
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=4016016
+Problem Size N=1000 in number of Iterations=1000
+Acc Time taken 1.173708 seconds for 1000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.1000.1000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 832,382
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [8]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=645 max=603 min=42 avg=322
+        106: data copyin transfers: 1
+             device time(us): total=362 max=362 min=362 avg=362
+        148: data copyout transfers: 1
+             device time(us): total=346 max=346 min=346 avg=346
+    111: compute region reached 1000 times
+        111: kernel launched 1000 times
+            grid: [8]  block: [128]
+             device time(us): total=516,431 max=547 min=484 avg=516
+            elapsed time(us): total=532,539 max=574 min=504 avg=532
+    143: compute region reached 1000 times
+        143: kernel launched 1000 times
+            grid: [8]  block: [128]
+             device time(us): total=315,237 max=325 min=295 avg=315
+            elapsed time(us): total=331,712 max=584 min=310 avg=331
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=4016016
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=4016016
+Problem Size N=1000 in number of Iterations=5000
+Acc Time taken 4.647819 seconds for 5000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.1000.5000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 4,168,149
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [8]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=652 max=610 min=42 avg=326
+        106: data copyin transfers: 1
+             device time(us): total=363 max=363 min=363 avg=363
+        148: data copyout transfers: 1
+             device time(us): total=347 max=347 min=347 avg=347
+    111: compute region reached 5000 times
+        111: kernel launched 5000 times
+            grid: [8]  block: [128]
+             device time(us): total=2,576,451 max=551 min=485 avg=515
+            elapsed time(us): total=2,656,208 max=1,612 min=505 avg=531
+    143: compute region reached 5000 times
+        143: kernel launched 5000 times
+            grid: [8]  block: [128]
+             device time(us): total=1,590,982 max=326 min=292 avg=318
+            elapsed time(us): total=1,670,920 max=738 min=308 avg=334
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=4016016
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=4016016
+Problem Size N=1000 in number of Iterations=5000
+Acc Time taken 4.650103 seconds for 5000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.1000.5000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 4,167,625
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [8]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=657 max=614 min=43 avg=328
+        106: data copyin transfers: 1
+             device time(us): total=364 max=364 min=364 avg=364
+        148: data copyout transfers: 1
+             device time(us): total=345 max=345 min=345 avg=345
+    111: compute region reached 5000 times
+        111: kernel launched 5000 times
+            grid: [8]  block: [128]
+             device time(us): total=2,576,201 max=550 min=484 avg=515
+            elapsed time(us): total=2,655,299 max=892 min=506 avg=531
+    143: compute region reached 5000 times
+        143: kernel launched 5000 times
+            grid: [8]  block: [128]
+             device time(us): total=1,590,709 max=325 min=293 avg=318
+            elapsed time(us): total=1,671,052 max=1,791 min=309 avg=334
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=4016016
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=4016016
+Problem Size N=1000 in number of Iterations=5000
+Acc Time taken 4.659120 seconds for 5000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.1000.5000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 4,167,797
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [8]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=655 max=604 min=51 avg=327
+        106: data copyin transfers: 1
+             device time(us): total=363 max=363 min=363 avg=363
+        148: data copyout transfers: 1
+             device time(us): total=349 max=349 min=349 avg=349
+    111: compute region reached 5000 times
+        111: kernel launched 5000 times
+            grid: [8]  block: [128]
+             device time(us): total=2,576,056 max=551 min=486 avg=515
+            elapsed time(us): total=2,656,147 max=624 min=506 avg=531
+    143: compute region reached 5000 times
+        143: kernel launched 5000 times
+            grid: [8]  block: [128]
+             device time(us): total=1,591,023 max=326 min=297 avg=318
+            elapsed time(us): total=1,673,641 max=1,821 min=311 avg=334
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16193936
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16194256
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=5000 in number of Iterations=1000
+Acc Time taken 5.583815 seconds for 1000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.5000.1000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 5,180,255
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [40]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=650 max=607 min=43 avg=325
+        106: data copyin transfers: 6
+             device time(us): total=8,369 max=1,408 min=1,374 avg=1,394
+        148: data copyout transfers: 6
+             device time(us): total=7,716 max=1,305 min=1,273 avg=1,286
+    111: compute region reached 1000 times
+        111: kernel launched 1000 times
+            grid: [40]  block: [128]
+             device time(us): total=3,020,338 max=3,232 min=2,980 avg=3,020
+            elapsed time(us): total=3,051,373 max=5,596 min=3,000 avg=3,051
+    143: compute region reached 1000 times
+        143: kernel launched 1000 times
+            grid: [40]  block: [128]
+             device time(us): total=2,143,826 max=2,183 min=2,123 avg=2,143
+            elapsed time(us): total=2,168,407 max=2,219 min=2,140 avg=2,168
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16193936
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16194256
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=5000 in number of Iterations=1000
+Acc Time taken 5.606116 seconds for 1000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.5000.1000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 5,190,256
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [40]  block: [128]
+             device time(us): total=8 max=4 min=4 avg=4
+            elapsed time(us): total=661 max=618 min=43 avg=330
+        106: data copyin transfers: 6
+             device time(us): total=8,391 max=1,408 min=1,376 avg=1,398
+        148: data copyout transfers: 6
+             device time(us): total=7,714 max=1,291 min=1,270 avg=1,285
+    111: compute region reached 1000 times
+        111: kernel launched 1000 times
+            grid: [40]  block: [128]
+             device time(us): total=3,026,620 max=3,514 min=2,982 avg=3,026
+            elapsed time(us): total=3,049,521 max=3,540 min=2,998 avg=3,049
+    143: compute region reached 1000 times
+        143: kernel launched 1000 times
+            grid: [40]  block: [128]
+             device time(us): total=2,147,523 max=2,305 min=2,120 avg=2,147
+            elapsed time(us): total=2,174,268 max=4,728 min=2,138 avg=2,174
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16193936
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16194256
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=5000 in number of Iterations=1000
+Acc Time taken 5.605719 seconds for 1000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.5000.1000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 5,180,406
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [40]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=662 max=611 min=51 avg=331
+        106: data copyin transfers: 6
+             device time(us): total=8,411 max=1,417 min=1,366 avg=1,401
+        148: data copyout transfers: 6
+             device time(us): total=7,696 max=1,292 min=1,269 avg=1,282
+    111: compute region reached 1000 times
+        111: kernel launched 1000 times
+            grid: [40]  block: [128]
+             device time(us): total=3,020,368 max=3,228 min=2,981 avg=3,020
+            elapsed time(us): total=3,044,613 max=4,423 min=3,002 avg=3,044
+    143: compute region reached 1000 times
+        143: kernel launched 1000 times
+            grid: [40]  block: [128]
+             device time(us): total=2,143,925 max=2,187 min=2,122 avg=2,143
+            elapsed time(us): total=2,172,382 max=4,170 min=2,141 avg=2,172
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16193936
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16194256
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=5000 in number of Iterations=5000
+Acc Time taken 26.342454 seconds for 5000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.5000.5000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 25,679,649
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [40]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=669 max=621 min=48 avg=334
+        106: data copyin transfers: 6
+             device time(us): total=8,422 max=1,411 min=1,380 avg=1,403
+        148: data copyout transfers: 6
+             device time(us): total=7,702 max=1,288 min=1,271 avg=1,283
+    111: compute region reached 5000 times
+        111: kernel launched 5000 times
+            grid: [40]  block: [128]
+             device time(us): total=14,941,862 max=3,235 min=2,961 avg=2,988
+            elapsed time(us): total=15,067,090 max=5,759 min=2,981 avg=3,013
+    143: compute region reached 5000 times
+        143: kernel launched 5000 times
+            grid: [40]  block: [128]
+             device time(us): total=10,721,657 max=2,179 min=2,118 avg=2,144
+            elapsed time(us): total=10,851,987 max=4,980 min=2,136 avg=2,170
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16193936
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16194256
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=5000 in number of Iterations=5000
+Acc Time taken 26.322680 seconds for 5000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.5000.5000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 25,692,112
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [40]  block: [128]
+             device time(us): total=7 max=4 min=3 avg=3
+            elapsed time(us): total=668 max=614 min=54 avg=334
+        106: data copyin transfers: 6
+             device time(us): total=8,411 max=1,415 min=1,378 avg=1,401
+        148: data copyout transfers: 6
+             device time(us): total=7,710 max=1,294 min=1,269 avg=1,285
+    111: compute region reached 5000 times
+        111: kernel launched 5000 times
+            grid: [40]  block: [128]
+             device time(us): total=14,949,058 max=3,511 min=2,960 avg=2,989
+            elapsed time(us): total=15,067,093 max=5,692 min=2,977 avg=3,013
+    143: compute region reached 5000 times
+        143: kernel launched 5000 times
+            grid: [40]  block: [128]
+             device time(us): total=10,726,926 max=2,306 min=2,118 avg=2,145
+            elapsed time(us): total=10,844,392 max=4,212 min=2,136 avg=2,168
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16193936
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16194256
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=5000 in number of Iterations=5000
+Acc Time taken 26.339343 seconds for 5000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.5000.5000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 25,678,629
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [40]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=656 max=610 min=46 avg=328
+        106: data copyin transfers: 6
+             device time(us): total=8,423 max=1,410 min=1,379 avg=1,403
+        148: data copyout transfers: 6
+             device time(us): total=7,702 max=1,290 min=1,272 avg=1,283
+    111: compute region reached 5000 times
+        111: kernel launched 5000 times
+            grid: [40]  block: [128]
+             device time(us): total=14,940,906 max=3,225 min=2,965 avg=2,988
+            elapsed time(us): total=15,063,288 max=4,976 min=2,983 avg=3,012
+    143: compute region reached 5000 times
+        143: kernel launched 5000 times
+            grid: [40]  block: [128]
+             device time(us): total=10,721,592 max=2,182 min=2,121 avg=2,144
+            elapsed time(us): total=10,843,767 max=4,445 min=2,140 avg=2,168
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=14284048
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=14285520
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=10000 in number of Iterations=1000
+Acc Time taken 12.042215 seconds for 1000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.10000.1000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 11,403,269
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [79]  block: [128]
+             device time(us): total=8 max=4 min=4 avg=4
+            elapsed time(us): total=664 max=612 min=52 avg=332
+        106: data copyin transfers: 24
+             device time(us): total=33,595 max=1,414 min=1,226 avg=1,399
+        148: data copyout transfers: 24
+             device time(us): total=30,710 max=1,293 min=1,138 avg=1,279
+    111: compute region reached 1000 times
+        111: kernel launched 1000 times
+            grid: [79]  block: [128]
+             device time(us): total=6,505,461 max=7,508 min=6,424 avg=6,505
+            elapsed time(us): total=6,543,045 max=14,176 min=6,454 avg=6,543
+    143: compute region reached 1000 times
+        143: kernel launched 1000 times
+            grid: [79]  block: [128]
+             device time(us): total=4,833,495 max=5,173 min=4,774 avg=4,833
+            elapsed time(us): total=4,883,122 max=14,545 min=4,795 avg=4,883
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=14284048
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=14285520
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=10000 in number of Iterations=1000
+Acc Time taken 12.008607 seconds for 1000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.10000.1000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 11,390,032
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [79]  block: [128]
+             device time(us): total=6 max=3 min=3 avg=3
+            elapsed time(us): total=650 max=608 min=42 avg=325
+        106: data copyin transfers: 24
+             device time(us): total=33,374 max=1,403 min=1,213 avg=1,390
+        148: data copyout transfers: 24
+             device time(us): total=30,723 max=1,298 min=1,122 avg=1,280
+    111: compute region reached 1000 times
+        111: kernel launched 1000 times
+            grid: [79]  block: [128]
+             device time(us): total=6,496,008 max=6,883 min=6,428 avg=6,496
+            elapsed time(us): total=6,535,667 max=13,318 min=6,451 avg=6,535
+    143: compute region reached 1000 times
+        143: kernel launched 1000 times
+            grid: [79]  block: [128]
+             device time(us): total=4,829,921 max=4,904 min=4,770 avg=4,829
+            elapsed time(us): total=4,867,568 max=12,578 min=4,800 avg=4,867
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=14284048
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=14285520
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=10000 in number of Iterations=1000
+Acc Time taken 12.024380 seconds for 1000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.10000.1000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 11,402,684
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [79]  block: [128]
+             device time(us): total=8 max=4 min=4 avg=4
+            elapsed time(us): total=645 max=601 min=44 avg=322
+        106: data copyin transfers: 24
+             device time(us): total=33,445 max=1,415 min=1,214 avg=1,393
+        148: data copyout transfers: 24
+             device time(us): total=30,734 max=1,296 min=1,132 avg=1,280
+    111: compute region reached 1000 times
+        111: kernel launched 1000 times
+            grid: [79]  block: [128]
+             device time(us): total=6,503,893 max=7,554 min=6,430 avg=6,503
+            elapsed time(us): total=6,546,769 max=15,196 min=6,451 avg=6,546
+    143: compute region reached 1000 times
+        143: kernel launched 1000 times
+            grid: [79]  block: [128]
+             device time(us): total=4,834,604 max=5,176 min=4,773 avg=4,834
+            elapsed time(us): total=4,875,417 max=13,844 min=4,794 avg=4,875
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=14284048
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=14285520
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=10000 in number of Iterations=5000
+Acc Time taken 57.338828 seconds for 5000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.10000.5000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 56,405,763
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [79]  block: [128]
+             device time(us): total=7 max=4 min=3 avg=3
+            elapsed time(us): total=662 max=616 min=46 avg=331
+        106: data copyin transfers: 24
+             device time(us): total=33,501 max=1,418 min=1,222 avg=1,395
+        148: data copyout transfers: 24
+             device time(us): total=30,692 max=1,290 min=1,128 avg=1,278
+    111: compute region reached 5000 times
+        111: kernel launched 5000 times
+            grid: [79]  block: [128]
+             device time(us): total=32,189,465 max=6,891 min=6,386 avg=6,437
+            elapsed time(us): total=32,343,401 max=14,633 min=6,408 avg=6,468
+    143: compute region reached 5000 times
+        143: kernel launched 5000 times
+            grid: [79]  block: [128]
+             device time(us): total=24,152,098 max=4,916 min=4,769 avg=4,830
+            elapsed time(us): total=24,333,035 max=13,597 min=4,791 avg=4,866
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=14284048
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=14285520
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=10000 in number of Iterations=5000
+Acc Time taken 57.327408 seconds for 5000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.10000.5000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 56,421,350
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [79]  block: [128]
+             device time(us): total=7 max=4 min=3 avg=3
+            elapsed time(us): total=653 max=612 min=41 avg=326
+        106: data copyin transfers: 24
+             device time(us): total=33,434 max=1,411 min=1,215 avg=1,393
+        148: data copyout transfers: 24
+             device time(us): total=30,638 max=1,287 min=1,124 avg=1,276
+    111: compute region reached 5000 times
+        111: kernel launched 5000 times
+            grid: [79]  block: [128]
+             device time(us): total=32,199,624 max=7,500 min=6,387 avg=6,439
+            elapsed time(us): total=32,361,041 max=14,535 min=6,411 avg=6,472
+    143: compute region reached 5000 times
+        143: kernel launched 5000 times
+            grid: [79]  block: [128]
+             device time(us): total=24,157,647 max=5,178 min=4,765 avg=4,831
+            elapsed time(us): total=24,327,287 max=12,074 min=4,789 avg=4,865
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=14284048
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+upload CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=106 device=0 threadid=1 variable=life bytes=16777216
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=14285520
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+download CUDA data  file=/mnt/beegfs/home/ualclsb0056/project/openacc_project.c function=compute_acc line=148 device=0 threadid=1 variable=life bytes=16777152
+Problem Size N=10000 in number of Iterations=5000
+Acc Time taken 57.309365 seconds for 5000 iterations
+Writing output to file: /scratch/ualclsb0056/project_output.10000.5000.txt
+
+Accelerator Kernel Timing data
+/mnt/beegfs/home/ualclsb0056/project/openacc_project.c
+  compute_acc  NVIDIA  devicenum=0
+    time(us): 56,419,508
+    106: data region reached 2 times
+        35: kernel launched 2 times
+            grid: [79]  block: [128]
+             device time(us): total=7 max=4 min=3 avg=3
+            elapsed time(us): total=644 max=600 min=44 avg=322
+        106: data copyin transfers: 24
+             device time(us): total=33,408 max=1,411 min=1,219 avg=1,392
+        148: data copyout transfers: 24
+             device time(us): total=30,732 max=1,298 min=1,123 avg=1,280
+    111: compute region reached 5000 times
+        111: kernel launched 5000 times
+            grid: [79]  block: [128]
+             device time(us): total=32,199,928 max=7,504 min=6,391 avg=6,439
+            elapsed time(us): total=32,366,888 max=14,979 min=6,412 avg=6,473
+    143: compute region reached 5000 times
+        143: kernel launched 5000 times
+            grid: [79]  block: [128]
+             device time(us): total=24,155,433 max=5,210 min=4,763 avg=4,831
+            elapsed time(us): total=24,312,614 max=14,953 min=4,789 avg=4,862
